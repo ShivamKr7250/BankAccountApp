@@ -32,13 +32,13 @@
             label2 = new Label();
             OwnerText = new TextBox();
             AmountNum = new NumericUpDown();
-            BankAccountGrid = new DataGridView();
+            BankAccountsGrid = new DataGridView();
             button1 = new Button();
             Withdraw = new Button();
             Deposit = new Button();
             CreateAccount = new Button();
             ((System.ComponentModel.ISupportInitialize)AmountNum).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BankAccountGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BankAccountsGrid).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -66,7 +66,7 @@
             // 
             OwnerText.Location = new Point(183, 114);
             OwnerText.Name = "OwnerText";
-            OwnerText.Size = new Size(215, 43);
+            OwnerText.Size = new Size(311, 43);
             OwnerText.TabIndex = 2;
             OwnerText.TextChanged += textBox1_TextChanged;
             // 
@@ -74,17 +74,18 @@
             // 
             AmountNum.Location = new Point(213, 522);
             AmountNum.Name = "AmountNum";
-            AmountNum.Size = new Size(198, 43);
+            AmountNum.Size = new Size(281, 43);
             AmountNum.TabIndex = 3;
             // 
-            // BankAccountGrid
+            // BankAccountsGrid
             // 
-            BankAccountGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BankAccountGrid.Location = new Point(453, 47);
-            BankAccountGrid.Name = "BankAccountGrid";
-            BankAccountGrid.RowHeadersWidth = 51;
-            BankAccountGrid.Size = new Size(467, 433);
-            BankAccountGrid.TabIndex = 4;
+            BankAccountsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            BankAccountsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BankAccountsGrid.Location = new Point(542, 47);
+            BankAccountsGrid.Name = "BankAccountsGrid";
+            BankAccountsGrid.RowHeadersWidth = 51;
+            BankAccountsGrid.Size = new Size(882, 433);
+            BankAccountsGrid.TabIndex = 4;
             // 
             // button1
             // 
@@ -98,7 +99,7 @@
             // 
             // Withdraw
             // 
-            Withdraw.Location = new Point(705, 512);
+            Withdraw.Location = new Point(1089, 512);
             Withdraw.Name = "Withdraw";
             Withdraw.Size = new Size(215, 61);
             Withdraw.TabIndex = 6;
@@ -107,7 +108,7 @@
             // 
             // Deposit
             // 
-            Deposit.Location = new Point(453, 512);
+            Deposit.Location = new Point(744, 512);
             Deposit.Name = "Deposit";
             Deposit.Size = new Size(246, 61);
             Deposit.TabIndex = 7;
@@ -116,7 +117,7 @@
             // 
             // CreateAccount
             // 
-            CreateAccount.Location = new Point(175, 187);
+            CreateAccount.Location = new Point(224, 181);
             CreateAccount.Name = "CreateAccount";
             CreateAccount.Size = new Size(223, 61);
             CreateAccount.TabIndex = 8;
@@ -127,22 +128,22 @@
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1003, 610);
+            ClientSize = new Size(1454, 718);
             Controls.Add(CreateAccount);
             Controls.Add(Deposit);
             Controls.Add(Withdraw);
             Controls.Add(button1);
-            Controls.Add(BankAccountGrid);
+            Controls.Add(BankAccountsGrid);
             Controls.Add(AmountNum);
             Controls.Add(OwnerText);
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)AmountNum).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BankAccountGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BankAccountsGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -153,7 +154,7 @@
         private Label label2;
         private TextBox OwnerText;
         private NumericUpDown AmountNum;
-        private DataGridView BankAccountGrid;
+        private DataGridView BankAccountsGrid;
         private Button button1;
         private Button Withdraw;
         private Button Deposit;
