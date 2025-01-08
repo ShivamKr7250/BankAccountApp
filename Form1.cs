@@ -32,8 +32,11 @@ namespace BankAccountApp
                 return;
             }
 
-            BankAccount bankAccount = new BankAccount(OwnerText.Text);
-            bankAccounts.Add(bankAccount);
+            if(InterestRateNum.Value > 0) 
+                bankAccounts.Add(new SavingsAccount(OwnerText.Text, InterestRateNum.Value));
+            else
+                bankAccounts.Add(new BankAccount(OwnerText.Text));
+
             Refresh();
             OwnerText.Text = string.Empty;
 
@@ -71,6 +74,11 @@ namespace BankAccountApp
                 MessageBox.Show(msg);
 
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
