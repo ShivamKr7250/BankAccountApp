@@ -14,5 +14,18 @@ namespace BankAccountApp
         {
             InterestRate = interestRate;
         }
+
+        public override string Deposit(decimal amount)
+        {
+            if (amount <= 0)
+            {
+                return "Amount must be greater than zero";
+            }
+
+            decimal interestAmount = amount * InterestRate / 100;
+
+            Balance += amount + interestAmount;
+            return "Amount deposited successfully";
+        }
     }
 }
